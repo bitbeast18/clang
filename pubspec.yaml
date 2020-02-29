@@ -8,8 +8,9 @@ homepage: https://bitbeast18.github.io/dart_clang
 environment:
   sdk: '>=2.7.0 <3.0.0'
 
-#dependencies:
-#  path: ^1.6.0
+dependencies:
+  ffi: ^0.1.3
+
 
 dev_dependencies:
   pedantic: ^1.8.0

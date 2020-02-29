@@ -5,7 +5,7 @@ Clang bindings for Dart lang.
 A simple usage example:
 
 ```dart
-import 'package:dart_clang/dart_clang.dart';
+import 'package:dart_clang/clang.dart';
 
 main() {
   printHello();
