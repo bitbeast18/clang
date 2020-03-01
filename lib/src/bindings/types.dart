@@ -1,7 +1,13 @@
 import 'dart:ffi';
 
-class CXCursorKind extends Struct{}
-class CXCursor extends Struct {}
+class CXCursor extends Struct {
+  @Int32()
+  int kind;
+
+  @Int32()
+  int xdata;
+
+}
 
 
 class CXCursorVisitor extends Struct {}
