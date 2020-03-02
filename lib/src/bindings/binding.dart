@@ -8,10 +8,10 @@ import 'types.dart';
 class _ClangBindings {
   DynamicLibrary clang;
 
-  CXIndex Function(int excludeDeclarationsFromPCH, int displayDiagnostics)
+  Pointer<CXIndex> Function(int excludeDeclarationsFromPCH, int displayDiagnostics)
       clang_createIndex;
 
-  CXTranslationUnit Function(
+  Pointer<CXTranslationUnit> Function(
       CXIndex CIdx,
       Utf8 filename,
       Pointer<Utf8> command_line_args,
@@ -25,7 +25,7 @@ class _ClangBindings {
 
   void Function(CXIndex) clang_disposeIndex;
 
-  CXCursor Function(CXTranslationUnit) clang_getTranslationUnitCursor;
+  Pointer<CXCursor> Function(CXTranslationUnit) clang_getTranslationUnitCursor;
 
   int Function(
           CXCursor parent, CXCursorVisitor visitor, CXClientData client_data)

@@ -4,10 +4,10 @@ import 'types.dart';
 import 'dart:ffi';
 import 'package:ffi/ffi.dart';
 
-typedef clang_createIndex_native = CXIndex Function(Int32 excludeDeclarationsFromPCH,
+typedef clang_createIndex_native = Pointer<CXIndex> Function(Int32 excludeDeclarationsFromPCH,
     Int32 displayDiagnostics);
 
-typedef clang_parseTranslationUnit_native = CXTranslationUnit Function(CXIndex CIdx,
+typedef clang_parseTranslationUnit_native = Pointer<CXTranslationUnit> Function(CXIndex CIdx,
     Utf8 filename,
     Pointer<Utf8> command_line_args,
     Int32 num_command_line_args,
@@ -20,7 +20,7 @@ typedef clang_disposeTranslationUnit_native = Void Function(CXTranslationUnit);
 
 typedef clang_disposeIndex_native = Void Function(CXIndex);
 
-typedef clang_getTranslationUnitCursor_native = CXCursor Function(CXTranslationUnit);
+typedef clang_getTranslationUnitCursor_native = Pointer<CXCursor> Function(CXTranslationUnit);
 typedef clang_visitChildren_native = Int32 Function(CXCursor parent,
     CXCursorVisitor visitor,
     CXClientData client_data);
